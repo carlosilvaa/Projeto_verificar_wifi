@@ -1,7 +1,23 @@
+<h3 style="text-align: center;">Gráfico 5.0GHz</h3>
 <dx-chart id="chart" [dataSource]="dataSource">
-  <dxi-series valueField="dbm50" name="Sinal 5gb"></dxi-series>
-  <dxi-series valueField="mb50" name="Velocidade 5gb"></dxi-series>
-  <dxi-series valueField="interferencia" name="Interferencia"></dxi-series>
+  <dxi-series valueField="dbm50" name="Sinal 5GHz" color="#515A5A"></dxi-series>
+  <dxi-series valueField="mb50" name="Velocidade 5GHz" color="#FFC300"></dxi-series>
+  <dxi-series valueField="interferencia" name="Interferencia" color="#82E0AA"></dxi-series>
+
+  <dxo-common-series-settings argumentField="local" type="bar" hoverMode="allArgumentPoints"
+    selectionMode="allArgumentPoints">
+    <dxo-label [visible]="true" [format]="{ type: 'fixedPoint' }">
+    </dxo-label>
+  </dxo-common-series-settings>
+</dx-chart>
+<br>
+<hr>
+<br>
+<h3 style="text-align: center;">Gráfico 2.4GHz</h3>
+<dx-chart id="chart" [dataSource]="dataSource">
+  <dxi-series valueField="dbm24" name="Sinal 2.4GHz" color="#515A5A"></dxi-series> <!-- Cinza -->
+  <dxi-series valueField="mb24" name="Velocidade 2.4GHz" color="#FFC300"></dxi-series> <!-- Amarelo -->
+  <dxi-series valueField="interferencia" name="Interferencia" color="#82E0AA"></dxi-series> <!-- Azul Claro -->
 
   <dxo-common-series-settings argumentField="local" type="bar" hoverMode="allArgumentPoints"
     selectionMode="allArgumentPoints">

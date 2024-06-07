@@ -1,1 +1,11 @@
-<app-graphs></app-graphs>
+<dx-chart id="chart" [dataSource]="dataSource">
+  <dxi-series valueField="dbm50" name="Sinal 5gb"></dxi-series>
+  <dxi-series valueField="mb50" name="Velocidade 5gb"></dxi-series>
+  <dxi-series valueField="interferencia" name="Interferencia"></dxi-series>
+
+  <dxo-common-series-settings argumentField="local" type="bar" hoverMode="allArgumentPoints"
+    selectionMode="allArgumentPoints">
+    <dxo-label [visible]="true" [format]="{ type: 'fixedPoint' }">
+    </dxo-label>
+  </dxo-common-series-settings>
+</dx-chart>
